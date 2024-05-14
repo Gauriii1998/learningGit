@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+//drawClock();
+setInterval(drawClock, 1000);
+    </script>
+
+    <style>
+        element.style {
+    display: block;
+    -webkit-user-select: none;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+}
+img[Attributes Style] {
+    width: 536px;
+    aspect-ratio: auto 536 / 546;
+    height: 546px;
+}
+user agent stylesheet
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="300" style="background-color:#333"></canvas>
+</body>
+</html>

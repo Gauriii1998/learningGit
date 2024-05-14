@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+
+    <style>
+        .timebox{
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 150px;
+            width: 150px;            
+            display: inline-block;
+            text-align: center;
+            padding: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="timebox">
+        <h1>India</h1>
+        <p id="indiaTime"></p>
+    </div>
+
+    <div class="timebox">
+        <h1>London</h1>
+        <p id="londonTime"></p>
+    </div>
+
+    <div class="timebox">
+        <h1>New York</h1>
+        <p id="newyorkTime"></p>
+    </div>
+
+    <div class="timebox">
+        <h1>Sydney</h1>
+        <p id="sydneyTime"></p>
+    </div>
+
+    <script>
+        var getIndiaTime = function() {
+            document.getElementById("indiaTime").innerHTML = new Date().toLocaleString("en-US", {timeZone:'Asia/Kolkata', timeStyle:'medium', hourCycle:'h24'});
+        }
+        getIndiaTime();
+        setInterval(getIndiaTime,1000);
+
+        var getLondonTime = function() {
+            document.getElementById("londonTime").innerHTML = new Date().toLocaleString("en-US", {timeZone:'Europe/London', timeStyle:'medium', hourCycle:'h24'});
+        }
+        getLondonTime();
+        setInterval(getLondonTime,1000);
+
+        var getNewyorkTime = function() {
+            document.getElementById("newyorkTime").innerHTML = new Date().toLocaleString("en-US", {timeZone:'America/New_york', timeStyle:'medium', hourCycle:'h24'});
+        }
+        getNewyorkTime();
+        setInterval(getNewyorkTime,1000);
+
+        var getSydneyTime = function() {
+            document.getElementById("sydneyTime").innerHTML = new Date().toLocaleString("en-US", {timeZone:'Australia/Sydney', timeStyle:'medium', hourCycle:'h24'});
+        }
+        getSydneyTime();
+        setInterval(getSydneyTime,1000);
+    </script>
+</body>
+</html>
